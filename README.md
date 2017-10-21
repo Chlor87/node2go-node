@@ -54,13 +54,13 @@ async function main() {
     console.log('Spawned, connected to socket, ready to read and write.')
 
     let res = await Promise.all([
-      time(fibonacci, 'NodeJS', n),
+      time('NodeJS', fibonacci, n),
 
       /**
        * @description normally it looks as simple as:
        * await go.call('fibonacci', {n})
        */
-      time(go.call.bind(go), 'Go', 'fibonacci', {n})
+      time('Go', go.call.bind(go), 'fibonacci', {n})
     ])
 
     console.log(JSON.stringify(res, null, 2))
@@ -82,7 +82,7 @@ main()
  *
  * @type {number} - the fibonacci sequence will be calculated for this number
  */
-const n = 30
+const n = 42
 
 /**
  *
@@ -102,12 +102,11 @@ function fibonacci(n) {
  * @param {*} args
  * @returns {{label: {string}, res: *, time: string}}
  */
-async function time(fn, label, ...args) {
+async function time(label, fn, ...args) {
   let start = Date.now()
   let res = await Promise.resolve(fn(...args))
   return {label, res, time: `${((Date.now() - start) / 1e3).toFixed(3)}s`}
 }
-
 ```
 
 
