@@ -141,7 +141,7 @@ export default class Client {
    *
    * @param {string} fnName - the name of the function to be called in Go
    * counterpart
-   * @param {Object|Array|*} data - anything that's JSON.stringify can take
+   * @param {Object|Array|*} data - anything that JSON.stringify can take
    * @returns {Promise}
    */
   async call(fnName = '', data) {

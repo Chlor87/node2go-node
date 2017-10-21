@@ -56,7 +56,7 @@ async function main() {
       time(fibonacci, 'NodeJS', n),
 
       /**
-       * @description normally it look's as simple as:
+       * @description normally it looks as simple as:
        * await go.call('fibonacci', {n})
        */
       time(go.call.bind(go), 'Go', 'fibonacci', {n})
