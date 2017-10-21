@@ -2,7 +2,8 @@
 
 ## Description
 
-This is the JavaScript part of the library.
+This is the JavaScript part of the library. Go counterpart: [node2go-go](https://github.com/Chlor87/node2go-go).
+    
 Node2Go is an easy way to call predefined Go functions from NodeJS with json data going back and forth.
 Im aware of the fact, that there's a library similar to this one on Github. It's called [gonode](https://github.com/jgranstrom/gonode).
 I just wanted to write one myself, for fun mostly.
@@ -11,7 +12,7 @@ I just wanted to write one myself, for fun mostly.
 * ES6 ready
 * async execution
 * JSON format communication
-* no dependencies besides babel (ES6 only modules)
+* no dependencies besides babel (ES6 modules only)
 * simple API - not yet documented in this file
 
 To be continued...
