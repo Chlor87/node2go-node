@@ -1,0 +1,16 @@
+{
+  "name": "node2go",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Kuba Kutiak",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "npm run build",
+    "watch": "babel -w src -d dist -s",
+    "build": "babel src -d dist -s"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0"
+  }
+}
